@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Home</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <% if (!locals.loggedIn) { %><li><a href="/register">Register</a></li><% } %>
+                <% if (locals.auth) { %> <li><a href="/admin">Admin Panel</a></li> <% } %>
+                <% if (!locals.loggedIn) { %> <li><a href="/login">Login</a></li><% } %>
+                <% if (locals.loggedIn) { %> <li><a href="/logout" onclick=" return confirm('Are you sure you want to logout?');">Logout</a></li> <% } %>
+                
+            </ul>
+        </nav>
+        <div class="main">
+            <h1>Welcome.</h1>
+        </div>
+
+    </body>
+</html>

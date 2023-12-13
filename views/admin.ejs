@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Admin Panel</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout" onclick=" return confirm('Are you sure you want to logout?');">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <h1>Uploaded Files</h1>
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>File Name</th>
+                    <th>File Size (bytes)</th>
+                    <th>Upload Date</th>
+                </tr>
+                <% files.forEach(function(file) { %>
+                    <tr>
+                        <td><%= file.username %></td>
+                        <td><%= file.fileName %></td>
+                        <td><%= file.fileSize %></td>
+                        <td><%= file.uploadDate.toDateString() %></td>
+                    </tr>
+                <% }) %>
+            </table>
+
+    </body>
+</html>

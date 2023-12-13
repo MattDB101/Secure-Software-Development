@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Home</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/logout" onclick=" return confirm('Are you sure you want to logout?');">Logout</a></li>
+            </ul>
+        </nav>
+    <div class="container mt-4">
+        <h1>Upload a File</h1>
+        <% if (locals.errorMessage) { %> <h6 class="centertext"><%= errorMessage %></h6><% } %>
+        <form action="/protected-route/?_csrf=<%=csrfToken%>" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="uploadedFile">Choose PDF file to upload:</label>
+                <input type="file" class="form-control-file" name="uploadedFile" id="uploadedFile" accept=".pdf" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Upload File</button>
+        </form>
+    </div>
+</body>
+</html>

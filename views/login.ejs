@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Home</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <div class="main">
+            <div class="form">
+                <h3 class="centertext">Login</h3>
+                <% if (locals.errorMessage) { %> <h4 class="centertext"><%= errorMessage %></h4><% } %>
+                <p><form action="/login" method="POST">
+                    <div class ="input">
+                        <input type="text" id="username" name="uname" required placeholder="Username"><br>
+                    </div>
+                    <div class ="input">
+                        <input type="password" id="password" name="pw" required placeholder="Password">
+                    </div>
+                    <div class ="input">
+                        <button class="button" type="cancel" onclick="javascript:window.location='http://localhost:3000/';">Cancel</button>
+                        <button class="button" type="submit" value="Submit">Login</button>
+                    </div>
+                </form></p>
+            </div>
+        </div>
+
+    </body>
+</html>
+
