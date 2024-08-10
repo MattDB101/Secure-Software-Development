@@ -2,8 +2,8 @@
 # Introduction
 
 This was my final project whilst undertaking a level 9 course in Secure Software Development. 
-The prescribed task was to plan with the use of JIRA and then subsequently create a login & file upload mechanism with role based access control. 
-Privilged users would be able to access a panel showing recently uploaded files metadata, whilst non-privileged users would only be able to access to file upload portal.
+The prescribed task was to plan, with the use of JIRA, and then subsequently create a login and file upload mechanism with role-based access control.
+Privilged users would be able to access an admin panel showing recently uploaded files and their metadata, non-privileged users would only be able to access to file upload portal.
 
 This project was focused solely on the security aspects of such a system.
 The technology chosen to implement this was Node.js with Express and MongoDB as a datastore.
