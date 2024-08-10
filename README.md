@@ -1,7 +1,7 @@
 
 # Introduction
 
-This was my final project whilst undertaking level 9 course in Secure Software Development. 
+This was my final project whilst undertaking a level 9 course in Secure Software Development. 
 The prescribed task was to plan with the use of JIRA and then subsequently create a login & file upload mechanism with role based access control. 
 Privilged users would be able to access a panel showing recently uploaded files metadata, whilst non-privileged users would only be able to access to file upload portal.
 
